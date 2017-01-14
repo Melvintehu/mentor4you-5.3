@@ -22,22 +22,13 @@ class PagesController extends Controller
 	public function indexHome()
 	{
         $data = [
-            'titel' => Section::where('id', 1)->first(),
-            'zoekmentor' => Section::where('id', 2)->first(),
-            'aanmeldenmentor' => Section::where('id', 3)->first(),
-            'resultaten' => Section::where('id', 4)->first(),
-            'actueeltitel' => Section::where('id', 36)->first(),
-            'partnerstitel' => Section::where('id', 6)->first(),
             'sliders' => $this->getSliders(),
-            'partners' => Partner::take(4)->get(),
-            'nieuwsbericht' => News::take(1)->get(),
         ];
 
         $laatsteNieuwsbericht = News::take(1)->get();
         $partners = Partner::take(4)->get();
         $sections = Section::byPageName('homepage');
         $section = new Section;
-
 		return view('pages.homepage', compact(
             'data',
             'section',
@@ -49,7 +40,13 @@ class PagesController extends Controller
 
 	public function jongerenAanmelden()
 	{
-        $municipalities = ['Noordenveld' => 'Noordenveld', 'Tynaarlo' => 'Tynaarlo', 'Assen' => 'Assen', 'Midden-Drenthe' => 'Midden-Drenthe', 'Aa en Hunze' => 'Aa en Hunze'];
+        $municipalities = [
+            'Noordenveld' => 'Noordenveld',
+            'Tynaarlo' => 'Tynaarlo',
+            'Assen' => 'Assen',
+            'Midden-Drenthe' => 'Midden-Drenthe',
+            'Aa en Hunze' => 'Aa en Hunze',
+        ];
 
          $data = [
             'sliders' => $this->getSliders(),

@@ -1,15 +1,20 @@
-<?php 
+<?php
 namespace App\Classes;
 
 use App\Section;
 
 class Slot
-{	
+{
 	public $position;
 	private $page;
 
+    public function setPage($page)
+    {
+        $this->page = $page;
+    }
+
 	public static function slotSpaces($page)
-    {	  
+    {
     	$totalSlotSpaces =  substr_count( $page->getContents() , 'text-inject' );
     	$slotSpaces = [];
 
@@ -26,7 +31,7 @@ class Slot
     }
 
     public function isAvailable()
-    {    	
+    {
 
     	$section = Section::where([
     		['page_id', $this->page->id],

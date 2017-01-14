@@ -47,7 +47,7 @@
                                                                  {!! Form::open(
                                                                     array(
                                                                         'method' => 'GET',
-                                                                        'action' => ['PageSectionsController@edit', $object->id]
+                                                                        'action' => ['SectionController@edit', $object->id]
                                                                         )
                                                                     )
                                                                 !!}
@@ -57,18 +57,18 @@
                                                             </td>
 
                                                             <!-- Verwijderen form -->
-                                                            <!-- <td>
+                                                            <td>
                                                                  {!! Form::open(
                                                                     array(
                                                                         'method' => 'DELETE',
-                                                                        'action' => ['PageSectionsController@destroy', $object->id]
+                                                                        'action' => ['SectionController@destroy', $object->id]
                                                                         )
                                                                     )
                                                                 !!}
 
                                                                 <input type='submit' class='btn btn-danger' value='verwijderen' />
                                                                 {!! Form::close() !!}
-                                                            </td> -->
+                                                            </td>
 
 
                                                         </tr>
@@ -79,7 +79,7 @@
                                         @else
                                                         <tr>
                                                             <td>
-                                                              <p> Er zijn nog geen secties toegevoegd aan deze pagina. Klik <a href="/cms/pageSections/create"> hier </a> om een sectie aan deze pagina toe te voegen. </p>
+                                                              <p> Er zijn nog geen secties toegevoegd aan deze pagina. Klik <a href="/cms/section/create"> hier </a> om een sectie aan deze pagina toe te voegen. </p>
                                                               </td>
                                                         </tr>
                                                     @endif

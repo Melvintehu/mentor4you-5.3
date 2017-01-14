@@ -20,12 +20,12 @@ class Page extends Model
     	'name',
     ];
 
-    public function availableSlots() 
-    {		
-    	// null object 
+    public function availableSlots()
+    {
+    	// null object
     	$nullSlot = new Slot;
     	$nullSlot->position = 0;
-    	
+
     	return Slot::slotSpaces($this)
     	->filter(function($slot){
     		return $slot->isAvailable();
@@ -33,7 +33,7 @@ class Page extends Model
     }
 
     public function getContents()
-    {	 
+    {
 		return FileHelper::getFileContents($this->directory, $this->name . '.blade.php');
     }
 
@@ -51,7 +51,7 @@ class Page extends Model
     	return false;
     }
 
-    public static function createFromDirectory($dir) 
+    public static function createFromDirectory($dir)
     {
     	FileHelper::getFilesFromDirectory($dir)
         ->getFiles()
@@ -65,9 +65,9 @@ class Page extends Model
     }
 
     private static function extractPage($file)
-    {	
+    {
     	$page = new Page;
-    	$page->name = str_replace('.blade.php', '', $file->getFilename()); 
+    	$page->name = str_replace('.blade.php', '', $file->getFilename());
     	return $page;
     }
 

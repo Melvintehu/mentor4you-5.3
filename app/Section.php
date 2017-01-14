@@ -25,7 +25,6 @@ class Section extends Model
     public static function byPageName($pageName)
     {
         $page = Page::where('name', $pageName)->first();
-
         $sections = $page->sections;
 
         return Section::setPagePositions($sections);
@@ -44,13 +43,22 @@ class Section extends Model
     }
 
 
-    public function render($type, $position, $data){
+    public function render($type, $position, $availableSections){
+
         if($type == 'title') {
-            echo (isset($data['sections'][$position])) ? $data['sections'][$position]->title : "";
+            echo (isset($availableSections[$position])) ? $availableSections[$position]->title : "";
         } else if($type == 'body'){
-            echo isset($data['sections'][$position]) ? $data['sections'][$position]->body : "";
+            echo isset($availableSections[$position]) ? $availableSections[$position]->body : "";
+        } else if($type == 'photo') {
+            echo (isset($availableSections[$position]) && $availableSections[$position]->photos != null ) ? $availableSections[$position]->photos->first()['path'] : "";
         }
     }
+
+    public function photos()
+    {
+        return $this->belongsToMany('App\Photo');
+    }
+
 
     /**
      * Description: create an array of sections where the order is based on their chosen pagePosition ( this is set in the cms )
@@ -60,10 +68,6 @@ class Section extends Model
     public static function setPagePositions($sections)
     {
         $sectionsNew = [];
-
-        // return collect($sections)->each(function($section) {
-
-        // });
 
         foreach ( $sections as $indexOfSection => $section )
         {
