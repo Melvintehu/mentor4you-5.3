@@ -1,0 +1,227 @@
+
+
+.divider{
+	width: 100%;
+	height: 1px; 
+	clear: both;
+}
+
+
+/* text */
+
+.black{
+	color: black;
+}
+
+
+/* backgrounds */
+
+.bg-white{
+	background: white;
+}
+
+
+
+
+
+
+/* input fields */
+
+
+.input{
+	border: none;
+	
+}
+
+
+@media (max-width: 768px) { 
+	
+	.input{
+		width: 100% !important;
+	}
+
+	.textarea{
+		width: 100% !important;
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 970px) { 
+	
+	.input{
+		width: 100% !important;
+	}
+
+	.textarea{
+		width: 100% !important;
+	}
+
+ }
+
+/* images */
+
+
+.image{
+	
+	display: block;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+
+
+
+}
+
+
+
+
+.big-img{
+	
+	width: 225px;
+	height: 225px;
+
+}
+
+.small-img{
+	
+	width: 150px;
+	height: 150px;
+
+}
+
+
+
+
+/* inputs */
+
+
+
+.textarea{
+		
+	resize: none;	
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	padding-left: 10px;	
+
+}
+
+/* borders */
+
+
+.border{
+
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	padding-left: 20px;
+
+}
+
+
+.border-accent{
+	border-color: black;
+}
+
+
+.border-secondary{
+	border-color: black;
+}
+
+.border-main{
+	border-color: black;
+}
+
+
+
+/* overlay */
+
+.overlay{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 10;
+}
+
+	
+
+/* shapes 
+
+	Afmetingen voor cirkels, rechthoeken etc
+
+
+*/
+
+
+.circle{
+	border-radius:2000px;
+	text-align: center;
+	display: inline-block;
+}
+
+.circle-sm{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+
+
+.circle-md{
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+
+}
+
+.circle-lg{
+	width: 150px;
+	height: 150px;
+
+}
+
+
+.circle-xl{
+	width: 225px;
+	height: 225px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* slider */
+
+.a-slider{
+	width: 40px;
+	font-size: 40px;
+	color: white;
+}
+
+.a-slider:hover{
+	color:white;
+}
+
+.slider-arrow{
+	position: absolute;
+	margin: auto;
+	bottom: 45%;
+  	width: 50px;
+	background-color: black;
+	opacity:0.8;
+}
+
+.slider-arrow-left{
+  	left: 1%;
+}
+
+.slider-arrow-right{
+	right: 1%;
+}
+
+
