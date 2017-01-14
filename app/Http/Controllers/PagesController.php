@@ -12,7 +12,7 @@ use App\Partner;
 
 class PagesController extends Controller
 {
-    
+
     private function getSliders()
     {
         return Section::where('page_id', Page::where('name', 'Slider')->first()->id)->get();
@@ -21,30 +21,33 @@ class PagesController extends Controller
 
 	public function indexHome()
 	{
-
-
-       
-       
         $data = [
-            'titel' => Section::where('id', 1)->first(),
-            'zoekmentor' => Section::where('id', 2)->first(),
-            'aanmeldenmentor' => Section::where('id', 3)->first(),
-            'resultaten' => Section::where('id', 4)->first(),
-            'actueeltitel' => Section::where('id', 36)->first(),
-            'partnerstitel' => Section::where('id', 6)->first(),
             'sliders' => $this->getSliders(),
-            'partners' => Partner::take(4)->get(),
-            'nieuwsbericht' => News::take(1)->get(),
         ];
 
-      
-		return view('pages.homepage', compact('data'));
+        $laatsteNieuwsbericht = News::take(1)->get();
+        $partners = Partner::take(4)->get();
+        $sections = Section::byPageName('homepage');
+        $section = new Section;
+		return view('pages.homepage', compact(
+            'data',
+            'section',
+            'sections',
+            'partners',
+            'laatsteNieuwsbericht'
+        ));
 	}
 
 	public function jongerenAanmelden()
 	{
-        $municipalities = ['Noordenveld' => 'Noordenveld', 'Tynaarlo' => 'Tynaarlo', 'Assen' => 'Assen', 'Midden-Drenthe' => 'Midden-Drenthe', 'Aa en Hunze' => 'Aa en Hunze'];
-        
+        $municipalities = [
+            'Noordenveld' => 'Noordenveld',
+            'Tynaarlo' => 'Tynaarlo',
+            'Assen' => 'Assen',
+            'Midden-Drenthe' => 'Midden-Drenthe',
+            'Aa en Hunze' => 'Aa en Hunze',
+        ];
+
          $data = [
             'sliders' => $this->getSliders(),
             'aanmeldenJongeren' => Section::where('id', 32)->first(),
@@ -107,6 +110,11 @@ class PagesController extends Controller
 		return view('pages.over-ons', compact('data'));
 	}
 
+    public function ervaringen()
+    {
+
+    }
+
 	public function steunons()
 	{
         $data = [
@@ -140,7 +148,7 @@ class PagesController extends Controller
             'sliders' => $this->getSliders(),
             'aanmeldbox' => Section::where('id', 13)->first(),
         ];
-       
+
         return view('pages.news.doorklik', compact('data'));
     }
 
@@ -177,9 +185,9 @@ class PagesController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $page = Page::create($request->all());
-        
+
         return redirect('cms/page');
 
     }
@@ -203,7 +211,7 @@ class PagesController extends Controller
      */
     public function edit($id)
     {
-        
+
         $data =[
             'page' => Page::find($id),
         ];
@@ -223,7 +231,7 @@ class PagesController extends Controller
         $page = Page::find($id);
 
         $page->update($request->all());
-    
+
         return redirect('cms/page');
 
     }

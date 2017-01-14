@@ -9,72 +9,69 @@
     <hr>
 
     <div class="row">
-        <div class="col-lg-12"> 
-            
+        <div class="col-lg-12">
             <hr>
             <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel panel-default">
-                           
-                            <div class="panel-body">
-                                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                        </div>
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        
-                                        <div class="table-responsive">        
+
+                                        <div class="table-responsive">
                                             <div>
                                                  {!! Form::model($data['section'],
                                                     array(
                                                         'method' => 'PUT',
-                                                        'action' => ['PageSectionsController@update', $data['section']->id]
+                                                        'action' => ['SectionController@update', $data['section']->id]
                                                         )
                                                     )
                                                 !!}
                                                     <thead>
                                                         <tr>
-                                                               <td>
-                                                                    {!! Form::label('title', ' De titel die weergegeven wordt op de website ') !!} 
-                                                                    {!! Form::text('title', null, ['class' => 'form-control']); !!} 
-                                                               </td>
-                                                            </tr>
-                                                            <tr>
-                                                               <td>
-                                                                    {!! Form::label('body', ' De text die weergegeven wordt op de website ') !!} 
-                                                                    {!! Form::textarea('body', null, ['class' => 'form-control']); !!} 
-                                                               </td>
-                                                            </tr>
-                                                            <tr>
-                                                               <td>
-                                                                    {!! Form::label('page_id', 'Waarop komt deze sectie ?') !!} 
-                                                                    {!! Form::select('page_id', $data['pages'], null, ['class' => 'form-control']); !!} 
-                                                               </td>
-                                                            </tr> 
-                                                       
-                                                    </thead>    
+                                                           <td>
+                                                                {!! Form::label('title', ' De titel die weergegeven wordt op de website ') !!}
+                                                                {!! Form::text('title', null, ['class' => 'form-control']); !!}
+                                                           </td>
+                                                        </tr>
+                                                        <tr>
+                                                           <td>
+                                                                {!! Form::label('body', ' De text die weergegeven wordt op de website ') !!}
+                                                                {!! Form::textarea('body', null, ['class' => 'form-control']); !!}
+                                                           </td>
+                                                        </tr>
 
-                                                                                                        
+
+
+                                                        <tr>
+                                                           <td>
+                                                                {!! Form::label('page_position', 'Op welke volgorde staat deze sectie ?') !!}
+                                                                {!! Form::select('page_position', $data['page_positions'], null , ['class' => 'form-control']); !!}
+                                                           </td>
+                                                        </tr>
+                                                    </thead>
+
+
                                                     <div class='form-group'>
                                                         <input type='submit' class='btn btn-primary' value='aanpassen' />
                                                     </div>
                                                 {!! Form::close() !!}
                                             </div>
                                         </div>
-                                       
                                     </div>
                                 </div>
                             </div>
-                           
                         </div>
                     </div>
-
                 </div> <!-- End row -->
-                
+
                    <div class="row">
 
                     <div class="col-md-12">
 
                         <div class="panel panel-default">
-                           
+
                             <div class="panel-body">
 
                                 <div class="row">
@@ -84,15 +81,8 @@
                                         <div class="table-responsive">
 
                                             <table class="table table-hover">
-                                                
+
                                                 <tbody>
-                                                   @foreach($data['section']->photos as $photo)
-                                                    <td>
-
-                                                        <div id='newsPhoto' class="col-lg-3">    <img style="width:100%" src="{{ $photo->path }}"> </div>
-
-                                                    </td>
-                                                    @endforeach
 
                                                 </tbody>
 
@@ -113,7 +103,7 @@
                 </div> <!-- End row -->
 
 
-            
+
                 <div class="row">
 
                     <div class="col-md-12">
@@ -123,7 +113,7 @@
                         <hr>
 
                         <div class="panel panel-default">
-                           
+
                             <div  class="panel-body">
 
                                 <div class="row">
@@ -133,7 +123,7 @@
                                         <div class="table-responsive">
 
                                             <table class="table">
-                                                
+
                                                 <tbody>
 
                                                     <tr>

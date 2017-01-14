@@ -12,10 +12,13 @@
         <div class="col-lg-12"> 
             
             <hr>
+            
             <div class="row">
+
                     <div class="col-md-12">
+
                         <div class="panel panel-default">
-                           
+
                             <div class="panel-body">
                                 
                                 <div class="row">
@@ -23,7 +26,7 @@
                                         <div class="table-responsive">        
                                             <table class="table table-hover">
                                                 <tr> 
-                                                {!! $data['pages']->render() !!}
+                                              
                                                 </tr>
                                                 <thead>
                                                     <tr>
@@ -36,13 +39,12 @@
                                                         <tr>
                                                             <td>{{ $object->id }}</td>
                                                             <td>{{ $object->name }}</td>
-                                                            
-                                                            <!-- Aanpassen form -->
+                                                            <!-- Secties weergave form -->
                                                             <td>
                                                                  {!! Form::open(
                                                                     array(
                                                                         'method' => 'GET',
-                                                                        'action' => ['PagesController@edit', $object->id]
+                                                                        'action' => ['PageController@edit', $object->id]
                                                                         )
                                                                     )
                                                                 !!}
@@ -51,12 +53,13 @@
                                                                 {!! Form::close() !!}
                                                             </td>
 
+
                                                             <!-- Verwijderen form -->
                                                             <td>
                                                                  {!! Form::open(
                                                                     array(
                                                                         'method' => 'DELETE',
-                                                                        'action' => ['PagesController@destroy', $object->id]
+                                                                        'action' => ['PageController@destroy', $object->id]
                                                                         )
                                                                     )
                                                                 !!}
@@ -67,23 +70,29 @@
 
 
                                                         </tr>
+
                                                     @endforeach
+
                                                 </tbody>
+
                                             </table>
+
                                         </div>
                                        
                                     </div>
+
                                 </div>
+
                             </div>
                            
                         </div>
+
                     </div>
 
                 </div> <!-- End row -->
                 
-
-
-
         </div>
+
     </div>
+
 @stop
