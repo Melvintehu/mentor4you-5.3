@@ -21,10 +21,6 @@ class PagesController extends Controller
 
 	public function indexHome()
 	{
-
-
-
-
         $data = [
             'titel' => Section::where('id', 1)->first(),
             'zoekmentor' => Section::where('id', 2)->first(),
@@ -37,8 +33,18 @@ class PagesController extends Controller
             'nieuwsbericht' => News::take(1)->get(),
         ];
 
+        $laatsteNieuwsbericht = News::take(1)->get();
+        $partners = Partner::take(4)->get();
+        $sections = Section::byPageName('homepage');
+        $section = new Section;
 
-		return view('pages.homepage', compact('data'));
+		return view('pages.homepage', compact(
+            'data',
+            'section',
+            'sections',
+            'partners',
+            'laatsteNieuwsbericht'
+        ));
 	}
 
 	public function jongerenAanmelden()

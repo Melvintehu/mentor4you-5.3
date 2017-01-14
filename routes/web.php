@@ -20,6 +20,10 @@ Route::get('/home', 'HomeController@index');
 Route::get('/aanmeldingen/nieuwe-jongere-aanmelding', 'CandidatesWebsiteController@createJongere');
 Route::get('/aanmeldingen/nieuwe-mentor-aanmelding', 'CandidatesWebsiteController@createMentoren');
 
+// resource routes
+Route::resource('Page', 'PagesController');
+Route::resource('Section', 'PageSectionsController');
+
 // mail routes
 Route::post('/mail/contact-mail', 'MailController@contactMail');
 Route::post('/mail/jongere-mail', 'MailController@jongereMail');
@@ -29,9 +33,8 @@ Route::post('/newsletters/subscribe', 'NewslettersWebsiteController@addEmail');
 // authentication
 Route::auth();
 
+
 Route::group(['prefix' => 'cms', 'middleware' => ['auth'] ], function () {
-
-
 // cms routes
 
     // get routes
@@ -40,17 +43,16 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth'] ], function () {
     Route::get('candidate/mentoren', 'CandidatesController@mentoren');
     Route::get('candidate/jongeren', 'CandidatesController@jongeren');
 
-
     // resources controllers
     Route::resource('candidate', 'CandidatesController');
     Route::resource('mentor', 'MentorsController');
     Route::resource('news', 'NewsController');
     Route::resource('youth', 'YouthController');
-    Route::resource('page', 'PagesController');
-    Route::resource('section', 'PageSectionsController');
+    Route::resource('page', 'PageController');
+    Route::resource('section', 'SectionController');
     Route::resource('partner', 'PartnersController');
     Route::resource('teammember', 'TeamMembersController');
-
+    Route::resource('slider', 'ImageSliderController');
 
     // photo upload routes
     Route::post('/partner/{id}/photos', 'PartnersController@addPhoto');
@@ -60,4 +62,3 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth'] ], function () {
     Route::post('/mentor/{id}/photos', 'MentorsController@addPhoto');
 
 });
-
