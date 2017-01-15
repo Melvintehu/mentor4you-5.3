@@ -2,6 +2,7 @@
 <div  class="row row-centered">
     <m4y-mentor  v-for="mentor in mentoren"
         :mentor="mentor"
+
     > </m4y-mentor>
 </div>
 
@@ -22,7 +23,6 @@
         },
 
         created() {
-
         },
     }
 </script>

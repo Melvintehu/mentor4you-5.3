@@ -112,7 +112,7 @@ class PagesController extends Controller
 
     public function ervaringen()
     {
-        $mentoren = Mentor::all();
+        $mentoren = Mentor::with('photos')->get();
 
         return view('pages.resultaten', compact('mentoren'));
     }

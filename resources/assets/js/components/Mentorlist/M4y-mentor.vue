@@ -2,7 +2,7 @@
 <div  >
     <div  class="col-lg-3  reset-padding space-inside-sides-sm space-outside-sm relative ">
         <div style="cursor:pointer" class="image "  @click="toggleOverlay">
-            <img class="height-auto" src="images/resultaten5.jpg" alt="leerling">
+            <img class="height-auto" :src="getPath()" :alt="mentor.first_name">
         </div>
     </div>
 
@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-lg-3 reset-padding space-inside-sides-sm  text-center">
                     <div class="image circle circle-lg bg-accent space-outside-md space-outside-left-md ">
-                        <img class="height-auto" src="images/resultaten5.jpg">
+                        <img class="height-auto" :src="getPath()" >
                     </div>
                 </div>
                 <div class="col-lg-9 space-outside-up-md space-inside-sides-lg">
@@ -60,7 +60,8 @@
     export default {
 
         props: {
-            mentor: ""
+            mentor: "",
+            photo: "",
         },
 
         data() {
@@ -81,6 +82,13 @@
                 this.overlay = false;
             },
 
+            // -------- GETTERS AND SETTERS
+            getPath() {
+                if(this.mentor.photos[0]) {
+                    return this.mentor.photos[0].path;
+                }
+            }
+
         },
         mounted() {
             document.addEventListener("keydown", (e) => {
@@ -88,6 +96,7 @@
                     this.toggleOverlay();
                 }
             });
+
         },
     }
 </script>
