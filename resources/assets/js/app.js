@@ -13,7 +13,11 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+require('./Core/Classes');
+
+Vue.component('m4y-mentor', require('./components/Mentorlist/M4y-mentor.vue'));
+Vue.component('m4y-mentorlist', require('./components/Mentorlist/M4y-mentorlist.vue'));
+
 
 const app = new Vue({
     el: '#app'

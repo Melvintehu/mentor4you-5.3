@@ -188,10 +188,12 @@ jQuery(document).ready(function($){
 });
 
         </script>
-
+        <script type="text/javascript" src="/js/app.js"></script>
+        <script type="text/javascript">
+        </script>
         <script src="../js/wow.min.js"></script>
               <script>
-              new WOW().init();
+                  new WOW().init();
               </script>
     </body>
 

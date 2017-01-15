@@ -7789,7 +7789,17 @@ a, a:hover, a:focus, a:active {
   z-index: 10;
 }
 
-/* shapes 
+.custom-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* shapes
 
 	Afmetingen voor cirkels, rechthoeken etc
 
@@ -11039,8 +11049,9 @@ body {
 /* overlay */
 .overlay-resultaten {
   min-height: 300px;
-  min-width: 1000px;
-  top: 310px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cd-slider-nav ul {
@@ -11095,7 +11106,7 @@ body {
     transform: translateX(0);
   }
   .cd-hero-slider .is-moving .cd-half-width {
-    /* this is the slide moving outside the viewport 
+    /* this is the slide moving outside the viewport
     wait for the end of the transition on the <li> parent before set opacity to 0 and translate to 40px/-40px */
     -webkit-transition: opacity 0s 0.5s, -webkit-transform 0s 0.5s;
     transition: opacity 0s 0.5s, -webkit-transform 0s 0.5s;

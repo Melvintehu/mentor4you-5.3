@@ -13,7 +13,6 @@ Route::get('/mentor4you', 'PagesController@overons');
 Route::get('/steun-ons', 'PagesController@steunons');
 Route::get('/ervaringen', 'PagesController@ervaringen');
 
-
 Route::get('/actueel', 'PagesController@actueel');
 Route::get('/actueel/{title}-{id}', 'PagesController@doorklikActueel');
 Route::get('/home', 'HomeController@index');

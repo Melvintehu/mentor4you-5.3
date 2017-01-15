@@ -8,6 +8,7 @@
 				</h1>
 			</div>
 		</div>
+
 		@foreach($partners as $partner)
 		<div class="col-lg-3 fadeInDown wow">
 			<div class="image rectangular-img ">
@@ -15,6 +16,7 @@
 			</div>
 		</div>
 		@endforeach
+
 	</div>
 	<!-- Einde van de row -->
 </section>

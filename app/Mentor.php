@@ -11,12 +11,10 @@ class Mentor extends Model
     	'last_name',
     	'description',
     	'date_of_birth',
-    	'municipality',
-
     ];
 
     public function photos(){
-        return $this->belongsToMany('App\Photo')->withPivot('type')->withTimeStamps();      
-    } 
-    
+        return $this->belongsToMany('App\Photo')->withPivot('type')->withTimeStamps();
+    }
+
 }

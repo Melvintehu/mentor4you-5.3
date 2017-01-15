@@ -8,7 +8,6 @@ class Youth extends Model
 {
      protected $table = 'youth';
 
-
      protected $fillable = [
      	'first_name',
      	'last_name',
@@ -17,7 +16,7 @@ class Youth extends Model
      ];
 
     public function photos(){
-        return $this->belongsToMany('App\Photo')->withPivot('type')->withTimeStamps();      
-    }  
-     
+        return $this->belongsToMany('App\Photo')->withPivot('type')->withTimeStamps();
+    }
+
 }

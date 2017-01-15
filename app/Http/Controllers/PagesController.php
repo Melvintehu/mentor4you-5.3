@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Section;
-use App\Page;
 use App\News;
+use App\Page;
+use App\Mentor;
+use App\Section;
 use App\Partner;
+use App\Http\Requests;
+use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
@@ -112,7 +112,9 @@ class PagesController extends Controller
 
     public function ervaringen()
     {
+        $mentoren = Mentor::all();
 
+        return view('pages.resultaten', compact('mentoren'));
     }
 
 	public function steunons()
