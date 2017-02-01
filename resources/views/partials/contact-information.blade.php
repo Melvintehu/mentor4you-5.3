@@ -1,4 +1,4 @@
-<section class="container-fluid xs-space-inside-sides-xs space-inside-sides-xl bg-secondary no-overflow">
+<section class="container-fluid xs-space-inside-sides-xs space-inside-sides-xl bg-secondary no-overflow ">
 	<div class="row">
 
 		<div class="col-lg-4  space-inside-sm xs-clear-float right">

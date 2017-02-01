@@ -87,13 +87,13 @@ a{ color: $dark-color; }
 	min-height: 1px;
 }
 
-.bg-light{ 
-	background: $background-color-light; 
+.bg-light{
+	background: $background-color-light;
 	min-height: 1px;
 }
 
-.bg-dark{ 
-	background: $background-color-dark; 
+.bg-dark{
+	background: $background-color-dark;
 	min-height: 1px;
 }
 
@@ -183,7 +183,7 @@ h3{ font-size: $font-size-sm; }
 
 a.btn-standard, input[type=submit].btn-standard, button.btn-standard{
 	padding: 15px 55px;
-	
+
 	margin-left: auto;
 	margin-right: auto;
 
@@ -201,6 +201,12 @@ a.btn-round, input[type=submit].btn-round, button.btn-round{
 	}
 }
 
+
+.rotate-90{
+	    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
 
 
 
@@ -264,14 +270,14 @@ a.btn-round, input[type=submit].btn-round, button.btn-round{
 
 .border-curved{ border-radius: 5px; }
 
-.border-curved-down{ 
+.border-curved-down{
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
  }
 
-.border-curved-up{ 
+.border-curved-up{
 	border-top-left-radius: 5px;
-	border-top-right-radius: 5px; 
+	border-top-right-radius: 5px;
 }
 
 .border-curved-right{
@@ -281,7 +287,7 @@ a.btn-round, input[type=submit].btn-round, button.btn-round{
 
 .border-curved-left{
 	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;	
+	border-bottom-left-radius: 5px;
 }
 
 

@@ -1,21 +1,13 @@
 .navbar-default{
 	background-color: $main-color;
 	border-color: $main-color;
-}
-
-.navbar-nav{
-    position: relative;
-    z-index: 1000;
+    float: right;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
     color: $secondary-color;
     background-color: transparent;
 }
-
-
-
-
 
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
     color: $secondary-color;
@@ -32,29 +24,18 @@
     margin-top: 15px;
 }
 
-
-
-
-
-
-
-
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
 
     .placeholder-nav{
-
         height: 0;
-        position:relative;
-        right: 109px;
         display: inline-block;
         border-left: 109px solid transparent;
         border-bottom: 109px solid $main-color;
         padding-right:110px;
         width: 100%;
-        float:right;
+        float: right;
         position: relative;
-        left: 55px;
     }
 
     .navbar{
@@ -113,41 +94,25 @@
         position:relative;
         top: 29px;
     }
-
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-
     .navbar{
         margin-bottom: 0 !important;
-
     }
-
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
-
-    .placeholder-nav{
-
-
-
-    }
-
+    .placeholder-nav{}
     .navbar{
         margin-bottom: 0 !important;
-
     }
-
-
 }
 
 .round{
     border-radius: 2000px;
 }
 
-
-.dropdown-menu {
-
-}
+.dropdown-menu { }

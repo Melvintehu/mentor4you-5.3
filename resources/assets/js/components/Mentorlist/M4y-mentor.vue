@@ -1,4 +1,5 @@
 <template>
+<transition name="fade">
 <div  >
     <div  class="col-lg-3  reset-padding space-inside-sides-sm space-outside-sm relative ">
         <div style="cursor:pointer" class="image "  @click="toggleOverlay">
@@ -34,7 +35,7 @@
 
 
 </div>
-
+</transition>
 </template>
 
 <style>

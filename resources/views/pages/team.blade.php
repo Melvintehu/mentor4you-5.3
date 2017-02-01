@@ -8,7 +8,7 @@
 
 <section class="container-fluid xs-space-inside-sides-xl-none space-inside-sides-xl space-outside-lg no-overflow">
 		<div class="row">
-			
+
 			<div class="col-lg-12 space-outside-down-lg text-center fadeInDown wow">
 
 				<h1 class="">{{ $data['team']->title }}</h1>
@@ -16,7 +16,7 @@
 			</div>
 
 
-			<div class="col-lg-12 space-outside-down-md xs-text-center">			
+			<div class="col-lg-12 space-outside-down-md xs-text-center">
 
 					<div class="col-lg-8 fadeInDown wow">
 
@@ -39,7 +39,7 @@
 				</div>
 
 
-				
+
 
 
 				<div class="row row-centered ">
@@ -56,9 +56,9 @@
 							</div>
 							<div class="image round">
 								@if($teammember->first_name == 'Karin')
-									<img class="img-responsive" src="images/karin.jpg">
+									<img class="width-auto rotate-90" src="images/karin.jpg">
 								@elseif($teammember->first_name == 'Maran')
-									<img class="img-responsive" src="images/maran.jpg">
+									<img class="" src="images/maran.jpg">
 								@else
 									<img class="width-auto" src="http://www.bakkerijkosters.nl/afbeeldingen/geen_afbeelding_beschikbaar_gr.gif">
 								@endif

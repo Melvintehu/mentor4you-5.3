@@ -1,5 +1,5 @@
 <!-- background -->
-
+<div class="header">
 <!-- Container voor centreren van content -->
 	<div class="container-fluid">
 		<!-- Row wrapper voor content -->
@@ -30,6 +30,6 @@
 
 		</div> <!-- End of the row  -->
 	</div>
-
+</div>
 
 @include('partials.contact-information')
