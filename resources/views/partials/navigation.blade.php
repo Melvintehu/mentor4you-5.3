@@ -7,10 +7,18 @@
 			<a href="/">HOME <span class="sr-only">(current)</span></a>
 		</li>
 
-		<li class="{{ Request::path() == '/mentor4you' ? 'active' : '' }}">
+<!-- 		<li class="{{ Request::path() == '/mentor4you' ? 'active' : '' }}">
 			<a href="/mentor4you">MENTOR4YOU</a>
-		</li>
+		</li> -->
 
+	 	<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENTOR4YOU<span class="caret">	</span></a>
+				<ul class="dropdown-menu xs-text-center">
+				<li><a href="/mentor4you">MENTOR4YOU</a></li>
+				<li><a href="/werkgebied">Werkgebied</a></li>
+				<li><a href="/werkgebied">Team</a></li>
+          </ul>
+        </li>
 		<li class="{{ Request::path() == '/actueel' ? 'active' : '' }}">
 			<a href="{{ URL::to('actueel') }}">ACTUEEL</a>
 		</li>

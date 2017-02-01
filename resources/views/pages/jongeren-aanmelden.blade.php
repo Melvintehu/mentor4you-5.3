@@ -37,6 +37,8 @@ Aanmelden als jongere
 
 				</div>
 
+					<a href='folder-mentor' class="btn-standard bg-main text-color-light light space-outside-sm">PDF hier downloaden</a>
+
 			</div>
 			
 			<div class="col-lg-7 space-inside-sides-md">
