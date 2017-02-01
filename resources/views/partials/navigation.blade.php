@@ -7,10 +7,6 @@
 			<a href="/">HOME <span class="sr-only">(current)</span></a>
 		</li>
 
-<!-- 		<li class="{{ Request::path() == '/mentor4you' ? 'active' : '' }}">
-			<a href="/mentor4you">MENTOR4YOU</a>
-		</li> -->
-
 	 	<li class="dropdown">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENTOR4YOU<span class="caret">	</span></a>
 				<ul class="dropdown-menu xs-text-center">

@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-
+	<div id="app"></div>
 	<!-- Section waar het aanmelden gepromoot wordt.  -->
 	<section class="container-fluid xs-space-inside-sides-xsspace-inside-sides-xl no-overflow">
 		<div class="row row-centered">

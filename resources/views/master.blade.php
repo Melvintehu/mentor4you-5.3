@@ -50,13 +50,10 @@
 
         @include('partials.footer')
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 
-        <script type="text/javascript">
-
-
+<script type="text/javascript">
 
 jQuery(document).ready(function($){
     var slidesWrapper = $('.cd-hero-slider');

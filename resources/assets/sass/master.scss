@@ -4,11 +4,6 @@ body{
 }
 
 
-.header{
-	background: white;
-	min-height: 1px;
-	overflow: hidden;
-}
 
 
 
@@ -24,8 +19,9 @@ body{
 }
 
 .contact-balk{
-	background: $secondary-color;
+
 	min-height: 1px;
+	display: hidden;
 }
 
 .contact-balk .contact-info{
