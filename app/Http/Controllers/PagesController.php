@@ -8,6 +8,7 @@ use App\Mentor;
 use App\Section;
 use App\Partner;
 use App\Http\Requests;
+use App\TeamMember;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -15,7 +16,7 @@ class PagesController extends Controller
 
     private function getSliders()
     {
-        return Section::where('page_id', Page::where('name', 'Slider')->first()->id)->get();
+        // return Section::where('page_id', Page::where('name', 'Slider')->first()->id)->get();
     }
 
 
@@ -37,6 +38,24 @@ class PagesController extends Controller
             'laatsteNieuwsbericht'
         ));
 	}
+
+    public function werkgebied(){
+        $data = [
+            'werkgebied' => Section::where('id', 10)->first(),
+        ];
+
+        return view('pages.werkgebied', compact('data'));
+    }
+
+    public function team(){
+
+        $data = [
+            'team' => Section::where('id', 12)->first(),
+            'teammembers' => TeamMember::all(),
+        ];
+
+        return view('pages.team', compact('data'));
+    }
 
 	public function jongerenAanmelden()
 	{

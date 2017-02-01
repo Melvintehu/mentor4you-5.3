@@ -7,9 +7,13 @@
 Route::get('/', 'PagesController@indexHome');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/aanmelden-als-jongere', 'PagesController@jongerenAanmelden');
+Route::get('/folder-mentor', 'FilesController@mentorFolder');
+Route::get('/folder-jongere', 'FilesController@jongereFolder');
 Route::get('/aanmelden-als-mentor', 'PagesController@mentorenAanmelden');
 Route::get('/behaalde-resultaten', 'PagesController@resultaten');
 Route::get('/mentor4you', 'PagesController@overons');
+Route::get('/werkgebied', 'PagesController@werkgebied');
+Route::get('/team', 'PagesController@team');
 Route::get('/steun-ons', 'PagesController@steunons');
 Route::get('/ervaringen', 'PagesController@ervaringen');
 
