@@ -58,7 +58,7 @@
 								@if($teammember->first_name == 'Karin')
 									<img class="width-auto rotate-90" src="images/karin.jpg">
 								@elseif($teammember->first_name == 'Maran')
-									<img class="" src="images/maran.jpg">
+									<img class="width-auto" src="images/maran.jpg">
 								@else
 									<img class="width-auto" src="http://www.bakkerijkosters.nl/afbeeldingen/geen_afbeelding_beschikbaar_gr.gif">
 								@endif

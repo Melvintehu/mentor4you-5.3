@@ -12,7 +12,7 @@
 				<ul class="dropdown-menu xs-text-center">
 				<li><a href="/mentor4you">Mentor4you</a></li>
 				<li><a href="/werkgebied">Werkgebied</a></li>
-				<li><a href="/werkgebied">Team</a></li>
+				<li><a href="/team">Team</a></li>
           </ul>
         </li>
 		<li class="{{ Request::path() == '/actueel' ? 'active' : '' }}">
