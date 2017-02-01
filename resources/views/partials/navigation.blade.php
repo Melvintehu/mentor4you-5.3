@@ -10,7 +10,7 @@
 	 	<li class="dropdown">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MENTOR4YOU<span class="caret">	</span></a>
 				<ul class="dropdown-menu xs-text-center">
-				<li><a href="/mentor4you">MENTOR4YOU</a></li>
+				<li><a href="/mentor4you">Mentor4you</a></li>
 				<li><a href="/werkgebied">Werkgebied</a></li>
 				<li><a href="/werkgebied">Team</a></li>
           </ul>
